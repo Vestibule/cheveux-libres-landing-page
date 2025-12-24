@@ -9,7 +9,6 @@ import { Footer4 } from "./components/Footer4";
 export default function Page() {
   return (
     <div>
-      <Navbar7 />
       <Header19 />
       <Testimonials />
       <Layout140 />
