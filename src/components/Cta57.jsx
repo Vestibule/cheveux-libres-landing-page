@@ -15,8 +15,20 @@ export function Cta57() {
               Lancement janvier 2026. Rejoignez-nous dès maintenant.
             </p>
           </div>
-          <div className="flex items-start">
-            <button className="btn-primary">Rejoindre</button>
+          <div className="flex gap-4 items-start">
+            <button
+              className="btn-primary cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Être rappelé
+            </button>
+            <a
+              href="https://calendly.com/cheveux-libres/30min"
+              target="_blank"
+              className="btn-secondary cursor-pointer"
+            >
+              Prendre rendez-vous
+            </a>
           </div>
         </div>
       </div>
