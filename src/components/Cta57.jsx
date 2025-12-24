@@ -1,4 +1,4 @@
-export function Cta57() {
+export function Cta57({ onOpenModal }) {
   return (
     <section className="bg-white flex flex-col items-center px-[var(--padding-global)] py-8 w-full">
       <div className="flex flex-col items-center max-w-[1280px] w-full">
@@ -18,7 +18,7 @@ export function Cta57() {
           <div className="flex gap-4 items-start">
             <button
               className="btn-primary cursor-pointer"
-              onClick={() => setIsModalOpen(true)}
+              onClick={onOpenModal}
             >
               Être rappelé
             </button>

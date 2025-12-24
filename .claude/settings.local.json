@@ -9,7 +9,9 @@
       "Bash(pnpm run dev)",
       "mcp__plugin_figma_figma-desktop__get_design_context",
       "mcp__plugin_figma_figma-desktop__get_screenshot",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
