@@ -4,6 +4,18 @@ export function Layout140() {
   const [chiffreAffaires, setChiffreAffaires] = useState("5000");
   const [salaireActuel, setSalaireActuel] = useState("1400");
 
+  const handleCAIncrement = (increment) => {
+    const currentValue = parseFloat(chiffreAffaires) || 0;
+    const newValue = Math.max(0, currentValue + increment);
+    setChiffreAffaires(newValue.toString());
+  };
+
+  const handleSalaireIncrement = (increment) => {
+    const currentValue = parseFloat(salaireActuel) || 0;
+    const newValue = Math.max(0, currentValue + increment);
+    setSalaireActuel(newValue.toString());
+  };
+
   // Calculs détaillés à partir du CA
   const ca = chiffreAffaires ? parseFloat(chiffreAffaires) : 0;
   const produitTechnique = ca * 0.05; // 5%
@@ -65,15 +77,31 @@ export function Layout140() {
                   value={chiffreAffaires}
                   onChange={(e) => setChiffreAffaires(e.target.value)}
                   placeholder="3000"
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--text-regular)] focus:outline-none focus:ring-2 focus:ring-[var(--color-stonewall)] focus:border-transparent"
+                  className="w-full px-4 py-3 pr-32 border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--text-regular)] focus:outline-none focus:ring-2 focus:ring-[var(--color-stonewall)] focus:border-transparent"
                   style={{ fontFamily: "var(--font-sans)" }}
                 />
-                <span
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-secondary)] text-[var(--text-regular)]"
-                  style={{ fontFamily: "var(--font-sans)" }}
-                >
-                  €
-                </span>
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                  <span
+                    className="text-[var(--color-text-secondary)] text-[var(--text-regular)] mr-1"
+                    style={{ fontFamily: "var(--font-sans)" }}
+                  >
+                    €
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handleCAIncrement(-250)}
+                    className="w-8 h-8 flex items-center justify-center border border-[var(--color-border)] rounded-lg hover:bg-gray-100 transition-colors text-[var(--color-text-primary)] font-bold"
+                  >
+                    −
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleCAIncrement(250)}
+                    className="w-8 h-8 flex items-center justify-center border border-[var(--color-border)] rounded-lg hover:bg-gray-100 transition-colors text-[var(--color-text-primary)] font-bold"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -93,15 +121,31 @@ export function Layout140() {
                   value={salaireActuel}
                   onChange={(e) => setSalaireActuel(e.target.value)}
                   placeholder="1500"
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--text-regular)] focus:outline-none focus:ring-2 focus:ring-[var(--color-stonewall)] focus:border-transparent"
+                  className="w-full px-4 py-3 pr-32 border border-[var(--color-border)] rounded-[var(--radius-button)] text-[var(--text-regular)] focus:outline-none focus:ring-2 focus:ring-[var(--color-stonewall)] focus:border-transparent"
                   style={{ fontFamily: "var(--font-sans)" }}
                 />
-                <span
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-secondary)] text-[var(--text-regular)]"
-                  style={{ fontFamily: "var(--font-sans)" }}
-                >
-                  €
-                </span>
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                  <span
+                    className="text-[var(--color-text-secondary)] text-[var(--text-regular)] mr-1"
+                    style={{ fontFamily: "var(--font-sans)" }}
+                  >
+                    €
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handleSalaireIncrement(-50)}
+                    className="w-8 h-8 flex items-center justify-center border border-[var(--color-border)] rounded-lg hover:bg-gray-100 transition-colors text-[var(--color-text-primary)] font-bold"
+                  >
+                    −
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleSalaireIncrement(50)}
+                    className="w-8 h-8 flex items-center justify-center border border-[var(--color-border)] rounded-lg hover:bg-gray-100 transition-colors text-[var(--color-text-primary)] font-bold"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
           </div>

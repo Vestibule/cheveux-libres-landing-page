@@ -5,8 +5,7 @@ export function Cta57({ onOpenModal }) {
         <div className="flex flex-col gap-6 md:gap-8 items-center max-w-[768px] w-full">
           <div className="flex flex-col gap-5 md:gap-6 items-center text-center text-[var(--color-text-primary)] w-full">
             <div className="flex flex-col items-center heading-1 w-full">
-              <p className="w-full">Prêt à</p>
-              <p className="w-full">franchir le pas ?</p>
+              <h3 className="w-full text-3xl">Prêt à franchir le pas ?</h3>
             </div>
             <p
               className="text-[var(--text-regular)] font-normal leading-[1.5] w-full"

@@ -1,9 +1,9 @@
 export function Testimonials() {
   return (
-    <section className="bg-white flex flex-col items-center px-[var(--padding-global)] py-[var(--padding-section-large)] w-full">
-      <div className="flex flex-col gap-12 md:gap-20 items-center max-w-[1280px] w-full">
-        <div className="flex flex-col gap-5 items-center max-w-[768px] text-center text-[var(--color-text-primary)] w-full">
-          <h2 className="heading-2 w-full">Elles ont franchi le pas</h2>
+    <section className="bg-white flex flex-col items-center px-[var(--padding-global)] py-8 w-full">
+      <div className="flex flex-col md:gap-20 items-center max-w-[1280px] w-full">
+        <div className="flex flex-col mb-4 items-center max-w-[768px] text-center text-[var(--color-text-primary)] w-full">
+          <h2 className="text-3xl w-full">Elles ont franchi le pas</h2>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 px-0 md:px-8 items-start w-full">

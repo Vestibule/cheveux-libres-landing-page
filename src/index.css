@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Playfair+Display:wght@400;700&family=Lato:wght@400;500;600;700&display=swap');
 
 @theme {
   --color-stonewall: #9a8376;
@@ -27,7 +27,7 @@
   --text-heading-5: 20px;
   --text-large: 20px;
   --text-medium: 16px;
-  --text-regular: 14px;
+  --text-regular: 16px;
   --text-small: 12px;
 
   --padding-global: 20px;
@@ -42,7 +42,7 @@
     --text-heading-5: 32px;
     --text-large: 26px;
     --text-medium: 20px;
-    --text-regular: 18px;
+    --text-regular: 20px;
     --text-small: 16px;
 
     --padding-global: 64px;
@@ -63,8 +63,12 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: var(--text-regular);
   }
 }
 
@@ -86,9 +90,9 @@
   }
 
   .heading-1 {
-    font-family: var(--font-display);
+    font-family: "Inter", sans-serif;
     font-size: var(--text-heading-1);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.48px;
   }
@@ -100,9 +104,9 @@
   }
 
   .heading-2 {
-    font-family: var(--font-display);
+    font-family: "Inter", sans-serif;
     font-size: var(--text-heading-2);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.44px;
   }
@@ -114,9 +118,9 @@
   }
 
   .heading-5 {
-    font-family: var(--font-display);
+    font-family: "Inter", sans-serif;
     font-size: var(--text-heading-5);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.2px;
   }
