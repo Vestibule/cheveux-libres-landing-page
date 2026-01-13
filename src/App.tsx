@@ -8,19 +8,13 @@ import { Footer4 } from "./components/Footer4";
 import { CallbackModal } from "./components/CallbackModal";
 
 export default function Page() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <div>
-      <Header19 onOpenModal={() => setIsModalOpen(true)} />
+      <Header19 />
       <Testimonials />
       <Layout140 />
-      <Cta57 onOpenModal={() => setIsModalOpen(true)} />
+      <Cta57 />
       <Footer4 />
-      <CallbackModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 }

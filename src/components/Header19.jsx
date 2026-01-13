@@ -34,14 +34,8 @@ export function Header19({ onOpenModal }) {
               </div>
             </div>
             <div className="flex gap-4 items-start">
-              <button
-                className="btn-primary cursor-pointer"
-                onClick={onOpenModal}
-              >
-                Être rappelé
-              </button>
               <a
-                href="https://calendly.com/cheveux-libres/30min"
+                href="https://calendly.com/cheveux-libres/premier-rendez-vous"
                 target="_blank"
                 className="btn-secondary cursor-pointer"
               >
